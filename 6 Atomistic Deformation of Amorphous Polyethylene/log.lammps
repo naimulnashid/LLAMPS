@@ -2,32 +2,14 @@ LAMMPS (27 Jun 2024)
 OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
   using 1 OpenMP thread(s) per MPI task
 Loaded 1 plugins from C:\Users\nashi\AppData\Local\LAMMPS 64-bit 27Jun2024-MSMPI\plugins
-#####################################################
-#                                                   #
-# DEFORM DREIDING LAMMPS INPUT SCRIPT               #
-#                                                   #
-# Filename: in.deform_dreiding.txt                  #
-# Author: Mark Tschopp, 2010                        #
-#                                                   #
-# The methodology outlined here follows that from   #
-# Hossain, Tschopp, et al. 2010, Polymer.  Please   #
-# cite accordingly. The following script requires   #
-# a LAMMPS data file containing the coordinates and #
-# appropriate bond/angle/dihedral lists for each    #
-# united atom.                                      #
-#                                                   #
-# Execute the script through:                       #
-# lmp_exe < in.deform_dreiding.txt                  #
-#                                                   #
-#####################################################
+## This LAMMPS script is designed for molecular dynamics (MD) simulations, including equilibration stages and a uniaxial tensile deformation simulation. The script utilizes the Dreiding force field, which is commonly used for simulating organic and inorganic materials.
 
-# VARIABLES
-#variable fname string "PE_nc10_cl1000.dat"
+## Variables
 variable simname string "PE_nc10_cl1000"
 
 # Initialization
-units		real
-boundary	p p p
-atom_style	molecular
-log 		log.${simname}.txt
-log 		log.PE_nc10_cl1000.txt
+units	real
+boundary p p p
+atom_style molecular
+log log.${simname}.txt
+log log.PE_nc10_cl1000.txt
